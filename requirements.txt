@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+gramformer @ git+https://github.com/PrithivirajDamodaran/Gramformer.git
+torch
+transformers
+spacy
+jinja2
+sentencepiece
