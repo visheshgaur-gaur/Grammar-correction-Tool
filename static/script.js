@@ -36,6 +36,11 @@ async function correctGrammar(text) {
         }
 
         const data = await response.json();
+<<<<<<< HEAD
+=======
+        console.log("Full corrected text:", data.corrected_text); // Line 34
+
+>>>>>>> bfbbdef (Prepare project for Render deployment)
         return data.corrected_text;
 
     } catch (error) {
@@ -76,9 +81,16 @@ correctButton.addEventListener('click', async () => {
         outputDiv.classList.add('empty');
         showMessage(`Error: ${error.message}`, 'error');
     } finally {
+<<<<<<< HEAD
         // Reset button state
         correctButton.disabled = false;
     }
+=======
+    correctButton.disabled = false;
+    correctButton.innerHTML = 'Correct Grammar'; 
+    }
+
+>>>>>>> bfbbdef (Prepare project for Render deployment)
 });
 
 // its for the clear text button

@@ -21,7 +21,13 @@ def read_form(request: Request):
 @app.post("/correct-ui", response_class=HTMLResponse)
 async def correct_text_ui(request: Request, text: str = Form(...)):
     try:
+<<<<<<< HEAD
         corrected = list(gf.correct(text))[0]
+=======
+        corrections = list(gf.correct(input.text))
+        corrected = corrections[0] if corrections else "No correction could be made."
+
+>>>>>>> bfbbdef (Prepare project for Render deployment)
     except:
         corrected = "Correction failed"
     return templates.TemplateResponse("index.html", {"request": request, "result": corrected, "original": text})
@@ -32,4 +38,9 @@ async def correct_api(input: TextIn):
         corrected = list(gf.correct(input.text))[0]
         return {"corrected_text": corrected}
     except Exception as e:
+<<<<<<< HEAD
         return {"error": str(e)}
+=======
+        return {"error": str(e)}
+
+>>>>>>> bfbbdef (Prepare project for Render deployment)
