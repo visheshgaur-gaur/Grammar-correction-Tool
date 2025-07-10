@@ -4,6 +4,9 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from gramformer import Gramformer
 from pydantic import BaseModel
+import spacy.cli
+spacy.cli.download("en_core_web_sm")
+
 
 gf = Gramformer(models=1)  # 1 = Corrector
 
