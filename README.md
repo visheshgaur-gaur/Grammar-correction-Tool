@@ -55,7 +55,7 @@
 
 > Right the command on your terminal
 
-- git clone https://github.com/visheshgaur-gaur/Grammar-correction-Tool.git
+- git clone https://github.com/"your github name"/"your repository name".git
 - cd grammartools 
 
 ### 🔹 Install Dependencies
