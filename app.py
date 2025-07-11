@@ -5,7 +5,6 @@ from fastapi.templating import Jinja2Templates
 from gramformer import Gramformer
 from pydantic import BaseModel
 
-
 gf = Gramformer(models=1)  # 1 = Corrector
 
 app = FastAPI()
@@ -36,3 +35,7 @@ async def correct_api(input: TextIn):
         return {"corrected_text": corrected}
     except Exception as e:
         return {"error": str(e)}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e660e17 (developed new UI)

@@ -1,69 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advanced Grammar Correction</title>
-    
-    <!-- using Tailwind CSS  -->
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Link to  external CSS file -->
-     
-    <link rel="stylesheet" href="static/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrammoFix.in</title>
+
+  <link rel="stylesheet" href="static/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="text-3xl md:text-4xl font-bold text-right text-red-600 mb-4">
-            GrammoFix
-            
-        </h1>
-
-        <div class="input-section">
-            <label for="inputText" class="block text-gray-700 text-lg font-medium mb-2">
-                Enter your text here:
-            </label>
-            <textarea
-                id="inputText"
-                placeholder="Type or paste your text for grammar and style correction..."
-                class="w-full focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent"
-            ></textarea>
-        </div>
-
-        <div class="button-group flex flex-col sm:flex-row gap-4">
-            <button
-                id="correctBtn"
-                class="btn btn-primary flex-grow">
-
-                Correct Grammar
-            </button>
-            <button
-                id="clearBtn"
-                class="btn btn-secondary flex-grow">
-                </svg>
-                Clear Text
-            </button>
-        </div>
-
-        <div class="output-section">
-            <label for="outputText" class="block text-gray-700 text-lg font-medium mb-2">
-                Corrected text:
-            </label>
-            <div id="outputText" class="output-box empty">
-                Your corrected text will appear here...
-                <button id="copyBtn" class="copy-button">
-                    Copy
-                </button>
-            </div>
-        </div>
+ <div class="header">
+      <h1>GrammoFix</h1>
+      <h4>Improve your writing with our Ai grammar checker</h4>
     </div>
+    
 
-    <!-- Message Box for notifications -->
-    <div id="messageBox" class="message-box"></div>
+    <div class="content">
+      
+      <div class="card">
+        <div class="card-header">
+          <h2>Original Text</h2>
+        </div>
+        <div class="card-body">
+          <textarea 
+            id="inputText" 
+            placeholder="Enter your text here to check for grammar issues..."
+          ></textarea>
+        </div>
+      </div>
+      
+      <!-- Output Section -->
+      <div class="card">
+        <div class="card-header">
+          <h2>Corrected Text</h2>
+        </div>
+        <div class="card-body">
+          <textarea 
+            id="outputText" 
+            placeholder="Corrected text will appear here..." 
+            readonly
+          ></textarea>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="actions">
+      <button id="correctBtn" class="btn primary">Correct Grammar</button>
+      <button id="clearBtn" class="btn secondary">Clear Text</button>
+      <button id="copyBtn" class="btn success">Copy</button>
+    </div>
+    
 
-    <!-- Link to external JavaScript file -->
-    <script type="module" src="static/script.js"></script>
+    <footer>
+      <p>© 2025 GrammoFix.in. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <script src="static/script.js"></script>
 </body>
-</html> 
-
+</html>
